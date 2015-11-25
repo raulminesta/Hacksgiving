@@ -29,7 +29,17 @@
 					<td>Attack!</td>
 				</tr>
 			</table>
-			<a href=""><button>Visit Store!</button></a>
+
+			<form action="{% url 'buy_weapons' %}" method="POST">
+				{% csrf_token %}
+				<h1>You must arm yourself for the battle ahead</h1><br>
+				Choose your weapon:<select name="weapon">
+					<option value="2">Turkey Baster (2 damage)</option>
+					<option value="3">Microwave Oven (3 damage)</option>
+					<option value="5">Steak Knife (5 damage)</option>
+					<option value="15">Bazooka (15 damage)</option>
+			</form>
+			<a href="{% url 'buy_weapons' %}"><button>Visit Store!</button></a>
 		</div>
 	</div>
 </body>

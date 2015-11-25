@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>T-Killer 3000</title>
+	{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'turkeykill/style.css' %}">
+</head>
+<body>
+	<form action="" method="POST">
+		{% csrf_token %}
+		<h1>You must arm yourself for the battle ahead</h1><br>
+		Choose your weapon:<select name="weapon">
+			<option value="2">Turkey Baster (2 damage)</option>
+			<option value="3">Microwave Oven (3 damage)</option>
+			<option value="5">Steak Knife (5 damage)</option>
+			<option value="15">Bazooka (15 damage)</option>
+	</form>
+	<form action="" method="POST">
+		{% csrf_token %}
+	  <script
+	    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+	    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+	    data-amount="2000"
+	    data-name="Demo Site"
+	    data-description="2 widgets ($20.00)"
+	    data-image="/128x128.png"
+	    data-locale="auto">
+
+	  </script>
+	 </form>
+	 <h3><a href="{% url 'index' %}">Go back</a></h3>
+</body>
+</html>

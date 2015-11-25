@@ -7,4 +7,5 @@ urlpatterns = patterns('',
 	# url(r'^create/$', views.create, name= 'create'),
 	# url(r'^show/(?P<product_id>\d+)/$', views.show, name="show"),
 	url(r'^$', views.index, name='index'),
+	url(r'^buy_weapons/', views.buy_weapons, name='buy_weapons')
 )

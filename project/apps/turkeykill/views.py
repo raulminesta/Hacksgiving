@@ -21,3 +21,6 @@ def attack_turkey(request):
 		result= "Dealt" + str(request.session['damage']) + "to the Turkenator" + str(time)
 		request.session['mymessage'].insert(0,str(result))
 	return redirect('/')
+
+def buy_weapons(request):
+	return render(request, 'turkeykill/buy_weapons.html')
